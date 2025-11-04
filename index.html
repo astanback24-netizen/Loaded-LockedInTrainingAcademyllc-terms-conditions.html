@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loaded & Locked In Training Academy | Firearms Training</title>
+    <meta name="description" content="Loaded & Locked In Training Academy — certified firearms training for beginners, enthusiasts, and professionals. Courses include Basic Safety, Concealed Carry, Tactical Training, and Home Defense.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'primary-red': '#cc0000', // A strong, aggressive red
-                        'dark-bg': '#1a1a1a',    // Dark background for contrast
-                        'card-bg': '#2a2a2a',    // Slightly lighter dark for cards
+                        'primary-red': '#cc0000',
+                        'dark-bg': '#1a1a1a',
+                        'card-bg': '#2a2a2a',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -29,36 +33,40 @@
         /* Style for the hero background image */
         .hero-bg {
             background: url('https://placehold.co/1920x800/202020/999999?text=SEMI+SIGHTS+AND+TARGET') center/cover no-repeat;
-            background-blend-mode: multiply; /* Helps ensure text readability */
+            background-blend-mode: multiply;
             background-color: rgba(0, 0, 0, 0.4);
-        }
-        /* Fix for appearance-none on select in Tailwind */
-        select {
-            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23d1d5db' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
-            background-position: right 0.5rem center;
-            background-repeat: no-repeat;
-            background-size: 1.5em 1.5em;
-            padding-right: 2.5rem;
         }
     </style>
 </head>
 <body class="bg-dark-bg text-white font-sans antialiased">
 
     <header class="bg-black shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center py-4">
-            <h1 class="text-3xl font-extrabold text-primary-red tracking-wider">
-                L&LI ACADEMY
-            </h1>
-            <nav class="hidden sm:flex space-x-6 text-sm font-semibold uppercase">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+            <h1 class="text-3xl font-extrabold text-primary-red tracking-wider">L&LI ACADEMY</h1>
+
+            <nav id="primary-nav" class="hidden sm:flex space-x-6 text-sm font-semibold uppercase">
                 <a href="#home" class="text-white hover:text-primary-red transition duration-300">Home</a>
                 <a href="#about" class="text-white hover:text-primary-red transition duration-300">About</a>
                 <a href="#courses" class="text-white hover:text-primary-red transition duration-300">Courses</a>
                 <a href="#contact" class="text-white hover:text-primary-red transition duration-300">Contact</a>
                 <a href="#enroll" class="px-3 py-1 bg-primary-red text-white rounded-full hover:bg-red-700 transition duration-300">Enroll Now</a>
             </nav>
-            <div class="sm:hidden mt-3 space-x-4 text-xs font-medium uppercase">
+
+            <div class="sm:hidden flex items-center">
+                <button id="mobileMenuBtn" class="p-2 rounded-md text-white" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile nav (hidden by default) -->
+        <div id="mobile-nav" class="hidden sm:hidden bg-black border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col space-y-2">
+                <a href="#home" class="text-white hover:text-primary-red">Home</a>
+                <a href="#about" class="text-white hover:text-primary-red">About</a>
                 <a href="#courses" class="text-white hover:text-primary-red">Courses</a>
-                <a href="#enroll" class="px-2 py-1 bg-primary-red text-white rounded-full">Enroll</a>
+                <a href="#contact" class="text-white hover:text-primary-red">Contact</a>
+                <a href="#enroll" class="inline-block mt-2 px-3 py-1 bg-primary-red text-white rounded-full">Enroll</a>
             </div>
         </div>
     </header>
@@ -66,27 +74,17 @@
     <main>
         <section id="home" class="hero-bg h-[80vh] flex flex-col justify-center items-center text-center p-4 bg-opacity-70">
             <div class="bg-black bg-opacity-70 p-8 rounded-xl max-w-2xl border-b-4 border-primary-red shadow-2xl">
-                <h2 class="text-5xl md:text-6xl font-black text-primary-red mb-4 uppercase leading-tight">
-                    Master Firearm Safety & Precision
-                </h2>
-                <p class="text-lg md:text-xl text-gray-200 mb-8">
-                 Firearms training for beginners, enthusiasts, and professionals.
-                </p>
-                <a href="#enroll" class="inline-block px-10 py-4 bg-primary-red text-white font-bold text-lg rounded-full shadow-lg hover:bg-red-700 transform hover:scale-105 transition duration-300 ease-in-out">
-                    Enroll Today
-                </a>
+                <h2 class="text-5xl md:text-6xl font-black text-primary-red mb-4 uppercase leading-tight">Master Firearm Safety & Precision</h2>
+                <p class="text-lg md:text-xl text-gray-200 mb-8">Firearms training for beginners, enthusiasts, and professionals.</p>
+                <a href="#enroll" class="inline-block px-10 py-4 bg-primary-red text-white font-bold text-lg rounded-full shadow-lg hover:bg-red-700 transform hover:scale-105 transition duration-300">Enroll Today</a>
             </div>
         </section>
 
         <section id="about" class="py-16 md:py-24 bg-card-bg">
             <div class="max-w-4xl mx-auto px-4 text-center">
                 <h2 class="text-4xl font-bold text-white mb-6 border-b-4 border-primary-red inline-block pb-1">About Us</h2>
-                <p class="text-lg text-gray-300 leading-relaxed">
-                    At Loaded & Locked In Training Academy, we are dedicated to fostering a culture of **responsible and confident firearm ownership**. Our programs are designed by certified, real-world operators, ensuring every student—from first-timers to advanced shooters—receives comprehensive education in safety, accuracy, and tactical proficiency.
-                </p>
-                <p class="text-lg text-gray-300 mt-4 leading-relaxed">
-                    We believe proper training is non-negotiable. Join us to build the skills and mindset required to protect yourself and your loved ones effectively.
-                </p>
+                <p class="text-lg text-gray-300 leading-relaxed">At Loaded & Locked In Training Academy, we are dedicated to fostering a culture of <strong>responsible and confident firearm ownership</strong>. Our programs are designed by certified, real-world instructors with decades of experience.</p>
+                <p class="text-lg text-gray-300 mt-4 leading-relaxed">We believe proper training is non-negotiable. Join us to build the skills and mindset required to protect yourself and your loved ones effectively.</p>
             </div>
         </section>
 
@@ -94,27 +92,27 @@
             <div class="max-w-7xl mx-auto px-4 text-center">
                 <h2 class="text-4xl font-bold text-white mb-12 border-b-4 border-primary-red inline-block pb-1">Our Courses</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    
+
                     <div class="course-card bg-card-bg p-6 rounded-xl shadow-xl hover:shadow-primary-red/50 transition duration-300 border border-transparent hover:border-primary-red">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-4 text-primary-red" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/><path d="M12 7a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 0-2h-3V8a1 1 0 0 0-1-1z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-4 text-primary-red" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
                         <h3 class="text-2xl font-semibold text-primary-red mb-3">Basic Firearm Safety</h3>
                         <p class="text-gray-400">Essential introduction to safe handling, storage, and range etiquette. Start your journey responsibly.</p>
                     </div>
 
                     <div class="course-card bg-card-bg p-6 rounded-xl shadow-xl hover:shadow-primary-red/50 transition duration-300 border border-transparent hover:border-primary-red">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-4 text-primary-red" viewBox="0 0 24 24" fill="currentColor"><path d="M10 18a.999.999 0 0 0 .707-.293l6-6a.999.999 0 0 0 0-1.414l-6-6a.999.999 0 1 0-1.414 1.414L14.586 11l-5.293 5.293A.997.997 0 0 0 10 18z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-4 text-primary-red" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
                         <h3 class="text-2xl font-semibold text-primary-red mb-3">Concealed Carry Certification</h3>
                         <p class="text-gray-400">Comprehensive legal and practical training to obtain your concealed carry permit confidently.</p>
                     </div>
 
                     <div class="course-card bg-card-bg p-6 rounded-xl shadow-xl hover:shadow-primary-red/50 transition duration-300 border border-transparent hover:border-primary-red">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-4 text-primary-red" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-9.75 8h-2.25l3 3 3-3h-2.25A8 8 0 1 1 12 20a7.973 7.973 0 0 1-5.657-2.343L4.939 18.06A9.957 9.957 0 0 0 12 22a10 10 0 0 0 9.75-8h2.25l-3-3-3 3h2.25A8 8 0 1 1 12 4a7.973 7.973 0 0 1 5.657 2.343l1.414-1.414A9.957 9.957 0 0 0 12 2z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-4 text-primary-red" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2z"/></svg>
                         <h3 class="text-2xl font-semibold text-primary-red mb-3">Advanced Tactical Training</h3>
                         <p class="text-gray-400">Enhance proficiency in movement, cover, and complex shooting drills for dynamic scenarios.</p>
                     </div>
 
                     <div class="course-card bg-card-bg p-6 rounded-xl shadow-xl hover:shadow-primary-red/50 transition duration-300 border border-transparent hover:border-primary-red">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-4 text-primary-red" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/><path d="M12 7a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 0-2h-3V8a1 1 0 0 0-1-1z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-4 text-primary-red" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l9 7-1 11H4L3 10z"/></svg>
                         <h3 class="text-2xl font-semibold text-primary-red mb-3">Home Defense Strategies</h3>
                         <p class="text-gray-400">Learn to develop a personalized and legally sound defense plan for your home and family.</p>
                     </div>
@@ -127,14 +125,14 @@
             <div class="max-w-7xl mx-auto px-4 text-center">
                 <h2 class="text-4xl font-bold text-white mb-10 border-b-4 border-primary-red inline-block pb-1">Client Success Stories</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                    
+
                     <div class="bg-dark-bg p-6 rounded-xl border-l-4 border-primary-red shadow-lg">
-                        <p class="italic text-gray-300 text-lg mb-4">"The instructors are top-notch. I went from having zero experience to feeling absolutely confident and safe. The professionalism and attention to detail are unmatched."</p>
+                        <p class="italic text-gray-300 text-lg mb-4">"The instructors are top-notch. I went from having zero experience to feeling absolutely confident and safe. The professionalism and hands-on coaching made all the difference."</p>
                         <p class="font-semibold text-primary-red">– Alex M., Beginner Shooter</p>
                     </div>
 
                     <div class="bg-dark-bg p-6 rounded-xl border-l-4 border-primary-red shadow-lg">
-                        <p class="italic text-gray-300 text-lg mb-4">"Loaded & Locked In gave me the tactical and mental skills I needed to protect my family. The Advanced Training was challenging and incredibly rewarding."</p>
+                        <p class="italic text-gray-300 text-lg mb-4">"Loaded & Locked In gave me the tactical and mental skills I needed to protect my family. The Advanced Training was challenging but rewarding."</p>
                         <p class="font-semibold text-primary-red">– Sarah D., Home Owner</p>
                     </div>
 
@@ -146,9 +144,7 @@
             <div class="max-w-4xl mx-auto px-4">
                 <h2 class="text-4xl font-bold text-white mb-6">Ready to Get Loaded & Locked In?</h2>
                 <p class="text-xl text-red-100 mb-8">Secure your spot in our next training cycle and invest in your personal safety.</p>
-                <a href="#contact" class="inline-block px-12 py-5 bg-black text-white font-extrabold text-xl rounded-full shadow-2xl hover:bg-gray-800 transform hover:scale-105 transition duration-300 ease-in-out">
-                    Start Your Training Today
-                </a>
+                <a href="#contact" class="inline-block px-12 py-5 bg-black text-white font-extrabold text-xl rounded-full shadow-2xl hover:bg-gray-800 transform hover:scale-105 transition duration-300">Start Your Training Today</a>
             </div>
         </section>
 
@@ -156,22 +152,22 @@
             <div class="max-w-4xl mx-auto px-4 text-center">
                 <h2 class="text-4xl font-bold text-white mb-6 border-b-4 border-primary-red inline-block pb-1">Get In Touch</h2>
                 <p class="text-lg text-gray-300 mb-8">For inquiries about group rates, private lessons, or scheduling, please use the form below.</p>
-                
+
                 <div class="bg-card-bg p-8 rounded-xl shadow-2xl text-left">
                     <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-300">Full Name</label>
-                            <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-3 bg-dark-bg border border-gray-600 rounded-lg text-white focus:ring-primary-red focus:border-primary-red shadow-sm transition duration-150">
+                            <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-3 bg-dark-bg border border-gray-600 rounded-lg text-white focus:ring-primary-red focus:border-primary-red" />
                         </div>
 
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-300">Email Address</label>
-                            <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-3 bg-dark-bg border border-gray-600 rounded-lg text-white focus:ring-primary-red focus:border-primary-red shadow-sm transition duration-150">
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-3 bg-dark-bg border border-gray-600 rounded-lg text-white focus:ring-primary-red focus:border-primary-red" />
                         </div>
-                        
+
                         <div>
                             <label for="subject" class="block text-sm font-medium text-gray-300">Subject</label>
-                            <select id="subject" name="subject" required class="mt-1 block w-full px-4 py-3 bg-dark-bg border border-gray-600 rounded-lg text-white focus:ring-primary-red focus:border-primary-red shadow-sm transition duration-150">
+                            <select id="subject" name="subject" required class="mt-1 block w-full px-4 py-3 bg-dark-bg border border-gray-600 rounded-lg text-white focus:ring-primary-red focus:border-primary-red">
                                 <option value="" disabled selected>Select an inquiry type</option>
                                 <option value="enrollment">Course Enrollment Inquiry</option>
                                 <option value="private">Private Lesson Request</option>
@@ -182,39 +178,32 @@
 
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-300">Your Message</label>
-                            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-3 bg-dark-bg border border-gray-600 rounded-lg text-white focus:ring-primary-red focus:border-primary-red shadow-sm transition duration-150"></textarea>
+                            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-3 bg-dark-bg border border-gray-600 rounded-lg text-white focus:ring-primary-red focus:border-primary-red"></textarea>
                         </div>
 
-                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-lg font-medium text-white bg-primary-red hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-red focus:ring-offset-card-bg transition duration-300 uppercase transform hover:scale-[1.01]">
-                            Send Message
-                        </button>
+                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-lg font-medium text-white bg-primary-red hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-red">Send Message</button>
                     </form>
-                    <div id="formMessage" class="mt-4 text-center text-lg font-semibold hidden"></div>
+
+                    <div id="formMessage" class="mt-4 text-center text-lg font-semibold hidden" role="status" aria-live="polite"></div>
                 </div>
 
                 <div class="mt-12 pt-6 border-t border-gray-700">
                     <p class="text-xl font-medium text-primary-red mb-4">Direct Contact</p>
-                    <a href="mailto:info@loaded.lockedintrainingacademy.com" class="text-white hover:text-primary-red text-2xl font-bold transition duration-300">info@loaded.lockedintrainingacademy.com</a
-                                                                                                                                                                                                            
-                    <a <footer>>Contact: <a href="tel:+16672927545" aria-label="Call Support at 667-292-7545">Support: 667-292-7545</a></p></footer><a contact="input:phone#-667-292-7545</p>
-                    
-                                                                                                  
+                    <p class="text-white text-2xl font-bold mb-2"><a href="mailto:info@loadedlockedintrainingacademy.com" class="hover:text-primary-red" aria-label="Email Loaded and Locked In">info@loadedlockedintrainingacademy.com</a></p>
+                    <p class="text-white text-lg mb-6"><a href="tel:+16672927545" class="hover:text-primary-red" aria-label="Call Support at 667-292-7545">Support: +1 (667) 292-7545</a></p>
+
                     <p class="pt-8 text-xl font-medium text-primary-red">Follow Us</p>
                     <div class="flex justify-center space-x-6 mt-4">
-                        <a href="#" class="text-gray-400 hover:text-primary-red transition duration-300" aria-label="Facebook">
-                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3 8h-2V7h-3v3H8v2h2v3h3v-3h2v-2z"/></svg>
+                        <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary-red" aria-label="Facebook">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.2v-2.9h2.2V9.4c0-2.2 1.3-3.4 3.3-3.4.95 0 1.95.17 1.95.17v2.2h-1.13c-1.12 0-1.47.7-1.47 1.42v1.72h2.5l-.4 2.9h-2.1v7A10 10 0 0 0 22 12z"/></svg>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-primary-red transition duration-300" aria-label="Instagram">
-                        <a href=https://www.instagram.com/instructor_drea/                            
-                            <ion-icon name="logo-instagram"></ion-icon>                        
-                            
-                            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-                            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-                          
-                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 13.5h-7A2.5 2.5 0 0 1 8 13v-3.5a2.5 2.5 0 0 1 2.5-2.5h3.5a2.5 2.5 0 0 1 2.5 2.5v3.5a2.5 2.5 0 0 1-2.5 2.5zm0-2.5h-7v-3.5h7v3.5z"/></svg>
+
+                        <a href="https://www.instagram.com/instructor_drea/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary-red" aria-label="Instagram">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.5A4.5 4.5 0 1 0 16.5 13 4.5 4.5 0 0 0 12 8.5zm6-3a1 1 0 1 0 1 1 1 1 0 0 0-1-1z"/></svg>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-primary-red transition duration-300" aria-label="Twitter">
-                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.5 9h-3v3h-2v-3h-3v-2h3V7h2v2h3v2z"/></svg>
+
+                        <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary-red" aria-label="Twitter">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 5.9c-.6.3-1.3.5-2 .6.7-.4 1.2-1 1.4-1.8-.6.4-1.3.7-2.1.9A3.5 3.5 0 0 0 12 8.4c0 .3 0 .6.1.9-2.9-.1-5.4-1.5-7.1-3.5-.3.5-.4 1-.4 1.7 0 1.2.6 2.2 1.6 2.8-.5 0-.9-.1-1.3-.3 0 1.7 1.2 3.1 2.8 3.5-.5.2-1 .2-1.6.1.5 1.6 2 2.7 3.8 2.8A7 7 0 0 1 2 19.5 9.8 9.8 0 0 0 7.5 21c9 0 13.9-7.5 13.9-14V8c.9-.6 1.6-1.4 2.1-2.3-.8.4-1.6.7-2.5.8z"/></svg>
                         </a>
                     </div>
                 </div>
@@ -224,19 +213,20 @@
 
     <footer class="bg-black py-8 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-gray-400 text-sm">&copy; 2025 Loaded & Locked In Training Academy. All rights reserved.</p>
+            <p class="text-gray-400 text-sm">
+            &copy; 2025 Loaded & Locked In Training Academy. All rights reserved.
+            </p>
             <p class="text-gray-500 text-xs mt-2">Privacy Policy | Terms of Service</p>
         </div>
     </footer>
 
     <script>
         function handleFormSubmit(event) {
-            event.preventDefault(); // Stop the form from actually submitting
+            event.preventDefault();
             const form = document.getElementById('contactForm');
             const messageDiv = document.getElementById('formMessage');
             const submitButton = form.querySelector('button[type="submit"]');
 
-            // Simple validation check (relies on HTML's built-in validation)
             if (!form.checkValidity()) {
                 messageDiv.className = 'mt-4 text-center text-lg font-semibold text-primary-red';
                 messageDiv.textContent = 'Please fill out all required fields correctly.';
@@ -247,20 +237,29 @@
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;
 
-            // Simulate network delay
+            // Simulate network delay (replace with real POST/fetch to your API when available)
             setTimeout(() => {
-                // Success message
                 messageDiv.className = 'mt-4 text-center text-lg font-semibold text-green-500';
                 messageDiv.textContent = 'Thank you for your message! We will be in touch shortly.';
                 messageDiv.classList.remove('hidden');
-                
-                // Clear the form fields
+
                 form.reset();
-                
                 submitButton.textContent = 'Send Message';
                 submitButton.disabled = false;
             }, 1500);
         }
+
+        // Mobile nav toggle
+        (function() {
+            const btn = document.getElementById('mobileMenuBtn');
+            const mobileNav = document.getElementById('mobile-nav');
+            if (!btn || !mobileNav) return;
+            btn.addEventListener('click', () => {
+                const expanded = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', String(!expanded));
+                mobileNav.classList.toggle('hidden');
+            });
+        })();
     </script>
 </body>
 </html>
