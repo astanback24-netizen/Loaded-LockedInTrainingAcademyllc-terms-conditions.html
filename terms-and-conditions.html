@@ -3,66 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms and Conditions | Loaded & Locked In</title>
+    <title>Terms and Conditions | Loaded & Locked In Training Academy LLC</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary-red': '#cc0000',
-                        'dark-bg': '#1a1a1a',
-                        'card-bg': '#2a2a2a',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+    <link href="./css/main.css" rel="stylesheet"> 
     
     <style>
-        section { scroll-margin-top: 4rem; }
-        .hero-bg { 
-            /* You can remove this hero-bg rule if it's not needed for the T&C page */
-            background: url('https://placehold.co/1920x800/202020/999999?text=SEMI+SIGHTS+AND+TARGET') center/cover no-repeat;
-            background-blend-mode: multiply;
-            background-color: rgba(0, 0, 0, 0.4);
-        }
+        /* Ensures smooth scroll on this page too */
+        body { scroll-behavior: smooth; } 
     </style>
-
 </head>
-<body class="bg-dark-bg text-white font-sans antialiased">
-    
-    <div class="max-w-4xl mx-auto py-12 px-4">
+<body class="bg-dark-bg text-white font-sans antialiased py-16">
+
+    <div class="max-w-4xl mx-auto px-4">
+        <h1 class="text-4xl font-bold text-primary-red mb-6 border-b-4 border-primary-red inline-block pb-1">
+            Terms and Conditions
+        </h1>
         
-        <h1 class="text-4xl font-bold text-primary-red mb-8 border-b pb-2">Terms and Conditions</h1>
+        <p class="text-lg text-gray-300 mt-4 leading-relaxed">
+            Welcome to Loaded & Locked In Training Academy LLC. By accessing our website and using our services, you agree to comply with and be bound by the following terms.
+        </p>
         
-        <section class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4 text-white">1. Acceptance of Terms</h2>
-            <p class="text-gray-300 leading-relaxed">
-                By accessing and using this service, you accept and agree to be bound by the terms and provisions of this agreement. 
-            </p>
-        </section>
+        <h2 class="text-2xl font-semibold mt-10 mb-4 text-primary-red">1. Course Enrollment and Eligibility</h2>
+        <p class="text-gray-300 leading-relaxed mb-4">
+            Enrollment in any course (including Maryland HQL, CCW, and Advanced Training) requires the client to accurately represent their **legal eligibility to possess and handle firearms** as dictated by federal, state, and local law, including the State of Maryland.
+        </p>
         
-        <section class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4 text-white">2. Privacy Policy</h2>
-            <p class="text-gray-300 leading-relaxed">
-                Your use of the site is subject to the Loaded & Locked In Training Academy Privacy Policy.
-            </p>
-        </section>
+        <h2 class="text-2xl font-semibold mt-8 mb-4 text-primary-red">2. Safety and Conduct</h2>
+        <p class="text-gray-300 leading-relaxed mb-4">
+            Safety is non-negotiable. All clients must adhere strictly to the **4 universal rules of firearm safety** during all training sessions. Failure to comply may result in immediate dismissal from the course without refund. Clients must follow all instructions given by the Certified Instructor or Range Safety Officer.
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-4 text-primary-red">3. Certification and Licensure</h2>
+        <p class="text-gray-300 leading-relaxed mb-4">
+            Completion of a course does not guarantee certification or licensure by any governmental agency. Loaded & Locked In Training Academy LLC provides the required training curriculum, but final issuance of permits and licenses rests solely with the respective government authority.
+        </p>
         
-        </div>
-    
-    <footer class="bg-black py-4 text-center text-gray-500 text-sm">
-        &copy; 2025 Loaded & Locked In Training Academy LLC. All rights reserved.
-    </footer>
-    
+        <p class="text-gray-300 leading-relaxed mt-10 mb-4 text-sm">
+            *These terms are subject to change without prior notice. Last updated: November 6, 2025.*
+        </p>
+        
+        <p class="mt-12">
+            <a href="index.html" class="text-primary-red hover:text-red-700 transition duration-300">← Return to Home Page</a>
+        </p>
+    </div>
+
 </body>
 </html>
